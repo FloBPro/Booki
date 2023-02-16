@@ -8,9 +8,6 @@
 }
 section{
     width: 100%;
-    
-    margin-top: 4%;
-
 }
 
 body{
@@ -31,7 +28,6 @@ button {
     color: gray;
 }
 .stars {
-    padding-left: 3%;
     margin-bottom: 2%;
     display: flex;
     flex-direction: row;
@@ -45,8 +41,6 @@ button {
 /*<--Header-->*/ 
 
 header  {
-
-    margin-top: 2%;
     margin-bottom: 2%;
    
 }
@@ -60,8 +54,12 @@ header  {
 
 }
 
-.logo img{
+.logo{
+    width: 70%;
 }
+
+
+
 
 .aside_nav{
     width: 30%;
@@ -69,6 +67,10 @@ header  {
     flex-direction: row;
     justify-content: space-evenly;
 
+}
+
+.aside_nav h2:hover{
+    border:  2px solid black;
 }
 
 
@@ -81,6 +83,7 @@ header  {
     border: 1px solid #F2F2F2;
     border-radius: 15px 0px 0px 15px;
     padding: 1em;
+   
 }
 
 .search_location form{
@@ -131,24 +134,22 @@ header  {
 
 }
 
-legend {
-    padding-left: 3%;
-    display: flex;
-    height: auto;
-    align-items: center;
-}
+.filter button:hover{
+    background-color: cyan;
+  }
+
+
 .info i{
     border: 1px solid #D9D9D9;
     box-sizing: border-box;
 width: 24px;
 height: 24px;
 border-radius: 180px;
+text-align: center;
 
 }
 
-.info label{
-    text-align: center;
-}
+
 
 /*<--Main-->*/ 
 
@@ -167,8 +168,8 @@ main {
    width: 100%;
    height: 100%;
    flex-wrap: wrap;
-   justify-content: space-evenly;
-    align-items: inherit;
+   justify-content: space-between;
+   align-items: baseline;
 }
 
 
@@ -180,24 +181,16 @@ main {
 
 }
 
-.main_slideshow h1{
-    margin-bottom: 3%;
-}
 
-.main_slideshow h3{
-    padding-top: 3%;
-    padding-bottom: 3%;
-    padding-left: 3%;
-}
+
 
 .main_card{
     border: 5px solid white;
     box-shadow: 0px 5px 5px grey;
     border-radius: 25px;
     background-color: #FFFFFF;
-    width: 100%;
-    max-width: 240px;
-    max-height: 206px;
+    width: 30%;
+    padding: 1%;
     
 }
 
@@ -208,6 +201,7 @@ main {
     max-width: 246px;
     max-height: 124px;
     width: 100%;
+    object-fit: cover;
 
 }
 
@@ -218,12 +212,11 @@ main {
 }
 .main_activities{
     margin-top: 5%;
-    justify-content: space-evenly;
 
 }
 
 .activities_card{
-    box-shadow: 0px 5px 5px grey;
+   
     border-radius: 20px;
     width: 20%;
 
@@ -232,8 +225,21 @@ main {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: 20px 20px 0px 0px;
+}
 
+.main_activities figure{
+    width: auto;
+    height: 100%;
+  
+}
+
+.main_activities figcaption{
+    padding: 5%;
+    box-shadow: 0px 5px 5px grey;
+    border-radius: 0px 0px 20px 20px;
+    font-size: 1em;
+    font-weight: 700;
 }
 .main_activities h3{
     padding: 2%;
@@ -245,18 +251,25 @@ main {
 
 .activities {
     display: flex ;
+    height: 60%;
     justify-content: space-between;
 }
 /*<--Aside-->*/  
 
 
 aside{
-    display: flex;
-    flex-direction: column;
+    
     background-color: #F2F2F2;
     border-radius: 25px;
     padding: 2%;
-    justify-content: space-between;
+}
+
+.aside_main {
+    height: 95%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 aside i{
@@ -342,30 +355,46 @@ h2{
 }
 
 h1{
-    font-size: 1.6;
+    font-size: 1.5em;
 }
 
 @media screen and (max-width: 1100px ){
+
+
+    .filter{
+        width: 100%;
+    }
+
+    .filter ul{
+        width: 95%;
+    }
     .main_content {
         display: block;
         width: 100%;
 
     }
 
-    aside{
-        flex-direction: row;
+    .cards div{
+        margin: 2%;
     }
 
+
+    
     .main_slideshow{
         margin: 0;
         margin-bottom: 5%;
         
     }
-    .aside_slideshow div {
-        margin: auto;
-    }
     .aside_header{
-        display: block;
-        width: auto;
+        display: flex;
+        flex-direction: row;
+    }
+    .aside_main{
+        display: flex;
+        flex-direction: row;
+
+    }
+    .aside_card{
+        margin: 2%;
     }
 }
